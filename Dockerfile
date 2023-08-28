@@ -8,6 +8,7 @@ USER node
 COPY --chown=node:node package.json yarn.lock ./
 
 RUN yarn install
+RUN yarn add @mui/material @emotion/react @emotion/styled
 
 COPY --chown=node:node . .
 
